@@ -6,7 +6,7 @@ name: Build and deploy Powershell project to Azure Function App - cippahmcc
 on:
   push:
     branches:
-      - dev
+      - master
   workflow_dispatch:
 
 env:
@@ -24,7 +24,7 @@ jobs:
         uses: Azure/functions-action@v1
         id: fa
         with:
-          app-name: 'cippahmcc'
+          app-name: 'cippfdyob'
           slot-name: 'Production'
           package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D3F28C6FE40549659A230F7C9B4F2B98 }}
